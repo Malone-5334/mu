@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 
 import com.baselibrary.util.ToastUtil;
 import com.baselibrary.widget.LoadingDialog;
-import com.trello.rxlifecycle3.components.RxFragment;
+import com.trello.rxlifecycle3.components.support.RxFragment;
 
 import org.greenrobot.eventbus.EventBus;
 
