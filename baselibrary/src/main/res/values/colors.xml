@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">@color/blue500</color>
+    <color name="colorPrimaryDark">@color/blue700</color>
+    <color name="colorAccent">@color/bluea200</color>
+
+    <color name="item_view_selected_color">#cfcfcf</color>
+    <color name="item_view_normal_color">#FFFFFFFF</color>
+    <color name="dot_selected_color">#ababab</color>
+
+</resources>

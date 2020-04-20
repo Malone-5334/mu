@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BaseLibrary</string>
+
+    <integer-array name="material_colors">
+        <item>@color/colorAccent</item>
+        <item>@color/colorAccent</item>
+        <item>@color/colorAccent</item>
+        <item>@color/colorAccent</item>
+    </integer-array>
+
+</resources>

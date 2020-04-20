@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    api rootProject.ext.support.multidex
+    api rootProject.ext.support.appcompatV7
+    api rootProject.ext.support.supportV4
+    api rootProject.ext.support.drawable
+    api rootProject.ext.support.gridlayoutV7
+    api rootProject.ext.support.recyclerviewV7
+    api rootProject.ext.support.design //28以上不需要导入
+    api rootProject.ext.support.cardviewV7
+
+    api rootProject.ext.support.dagger
+    api rootProject.ext.support.rxPermission
+    api rootProject.ext.support.eventbus
+    api rootProject.ext.support.okhttp3
+//    api rootProject.ext.support.okio
+    api rootProject.ext.support.butterknife
+
+    api rootProject.ext.bugly
+    api rootProject.ext.retrofit
+    api rootProject.ext.dbflow
+    api rootProject.ext.rxLifecycle
+
+    api files('libs/commons-net-3.6.jar')
+}

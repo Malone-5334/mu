@@ -1,0 +1,93 @@
+ext{
+    baseApkDir = ""
+    android = [
+            compileSdkVersion :      28,
+            buildToolsVersion   :     '28.0.3',
+            minSdkVersion       :     19,
+            targetSdkVersion     :     28,
+            versionCode           :       20,
+            versionName          :     '1.2.0'
+    ]
+
+    dependVersion = [
+            multidex : "2.0.1+",
+            support    : "28.+",
+            dagger     : "2.11",
+            butterknife: "10.1.0",
+            rxPermission : "0.10.2",
+            rxLifecycle :"3.1.0",
+            rxjava     : "2.2.2",
+            rxandroid  : "2.1.0",
+            eventbus : "3.1.1",
+            retrofit2   : "2.6.1",
+            gson : "2.8.5",
+            dbflow : "4.2.4",
+            okhttp3     : "4.2.0",
+            leakcanary : "1.5"
+    ]
+
+    support = [
+            multidex : "androidx.multidex:multidex:$dependVersion.multidex",
+            supportV13: "androidx.legacy:legacy-support-v13:+",
+            supportV4: "androidx.legacy:legacy-support-v4:+",
+            appcompatV7: "androidx.appcompat:appcompat:+",
+            drawable:"androidx.vectordrawable:vectordrawable-animated:+",
+            gridlayoutV7:"androidx.gridlayout:gridlayout:+",
+            recyclerviewV7:"androidx.recyclerview:recyclerview:+",
+            design:"com.google.android.material:material:+",
+            cardviewV7 :"androidx.cardview:cardview:+",
+            virepager:"androidx.viewpager:viewpager:+",
+
+            rxPermission : "com.github.tbruyelle:rxpermissions:$dependVersion.rxPermission",
+            eventbus : "org.greenrobot:eventbus:$dependVersion.eventbus",
+            gson :"com.google.code.gson:gson:$dependVersion.gson",
+            butterknife :"com.jakewharton:butterknife:$dependVersion.butterknife",
+            butterknifCompiler :"com.jakewharton:butterknife-compiler:$dependVersion.butterknife",
+            dagger : "com.google.dagger:dagger:$dependVersion.dagger",
+            daggerCompiler : "com.google.dagger:dagger-compiler:$dependVersion.dagger",
+            DBFlow : "com.github.Raizlabs.DBFlow:dbflow-processor:$dependVersion.dbflow",
+            okhttp3 : "com.squareup.okhttp3:okhttp:$dependVersion.okhttp3"
+//            okio : "com.squareup.okio:okio:2.4.0"
+    ]
+
+    crashTinker = [
+            upgrade : 'com.tencent.bugly:crashreport_upgrade:latest.release',
+            crashreport : 'com.tencent.bugly:nativecrashreport:latest.release',
+            tinker : 'com.tencent.tinker:tinker-android-lib:latest.release'
+    ]
+    bugly = crashTinker.values()
+
+
+    rxjava2 = [
+            rxjava : 'io.reactivex.rxjava2:rxjava:$dependVersion.rxjava',
+            rxandroid : 'io.reactivex.rxjava2:rxandroid:$dependVersion.rxandroid'
+    ]
+
+    retrofit2 =[
+            retrofit2 :"com.squareup.retrofit2:retrofit:$dependVersion.retrofit2",
+            scalars : "com.squareup.retrofit2:converter-scalars:$dependVersion.retrofit2",
+            gson : "com.squareup.retrofit2:converter-gson:$dependVersion.retrofit2",
+            rxjava2 :"com.squareup.retrofit2:adapter-rxjava2:$dependVersion.retrofit2"
+    ]
+    retrofit = retrofit2.values()
+
+    DBFlow = [
+//            core : "com.github.agrosner.dbflow:core:$dependVersion.dbflow",
+//            lib :"com.github.agrosner.dbflow:lib:$dependVersion.dbflow",
+//            rx : "com.github.agrosner.dbflow:reactive-streams:$dependVersion.dbflow"
+//            sqlcipher : "com.github.agrosner.dbflow:sqlcipher:$dependVersion.dbflow",
+//            sql : "net.zetetic:android-database-sqlcipher:$dependVersion.dbflow" + "@aar"
+            core:"com.github.Raizlabs.DBFlow:dbflow-core:$dependVersion.dbflow",
+            dbflow:"com.github.Raizlabs.DBFlow:dbflow:$dependVersion.dbflow",
+    ]
+    dbflow = DBFlow.values()
+
+    lifecycle = [
+            lifecycle: "com.trello.rxlifecycle3:rxlifecycle:$dependVersion.rxLifecycle",
+            android : "com.trello.rxlifecycle3:rxlifecycle-android:$dependVersion.rxLifecycle",
+            rc : "com.trello.rxlifecycle3:rxlifecycle-components:$dependVersion.rxLifecycle",
+            preference:"com.trello.rxlifecycle3:rxlifecycle-components-preference:$dependVersion.rxLifecycle",
+            lal:"com.trello.rxlifecycle3:rxlifecycle-android-lifecycle:$dependVersion.rxLifecycle",
+    ]
+    rxLifecycle = lifecycle.values()
+}
