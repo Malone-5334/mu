@@ -1,9 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimary">@color/blue500</color>
-    <color name="colorPrimaryDark">@color/blue700</color>
-    <color name="colorAccent">@color/bluea200</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorYellow">#E4FE39</color>
+    <color name="colorDarkBlue">#030F57</color>
+    <color name="colorBlue">#121F87</color>
+    <color name="colorCyan">#36D1D4</color>
+    <color name="colorGreen">#38A262</color>
+    <color name="colorRed">#C31811</color>
+    <color name="colorGrey">#EDEDED</color>
+
+    <!--Dark color-->
+    <color name="colorBlackText">#424242</color>
+    <color name="colorBlackTextOrIcons">#8A8A8A</color>
+    <color name="colorBlackHintText">#A9A9A9</color>
+    <color name="colorBlackDividers">#E8E8E8</color>
+    <color name="colorBlack">#000000</color>
+
+    <!--Light color-->
+    <color name="colorWhiteText">#B2FFFFFF</color>
+    <color name="colorWhiteTextOrIcons">#FFFFFFFF</color>
+    <color name="colorWhiteTextHint">#4CFFFFFF</color>
+    <color name="colorWhiteDividers">#1EFFFFFF</color>
+
+    <color name="colorActivityBg">#F7F6FB</color>
+    <color name="colorWindowContent">#E9ECF1</color>
+    <color name="colorTWindowContent">#6FE9ECF1</color>
+    <color name="colorWindowContentBalck">#8A12A99A</color>
+
+    <!--功能模块-->
+    <color name="colorStatusBar">#1F000000</color>
+    <color name="colorNavigation">#FFFFFF</color>
+    <color name="colorNavigationIcon">#ACACAC</color>
+    <color name="colorNavigationIconHint">@color/colorPrimary</color>
+    <color name="colorButtonBackgroundNormal">@color/colorPrimary</color>
+    <color name="colorButtonBackgroundPressed">#159083</color>
+    <color name="colorButtonBackgroundDisbled">#AFE5DF</color>
+    <color name="colorRedButtonBackgroundNormal">#F35252</color>
+    <color name="colorRedButtonBackgroundPressed">#CF4646</color>
+    <color name="colorRedButtonBackgroundDisbled">#FAB1B1</color>
+    <color name="colorGreenButtonBackgroundNormal">#24C789</color>
+    <color name="colorGreenButtonBackgroundPressed">#1DA370</color>
+    <color name="colorGreenButtonBackgroundDisbled">#5FF7BD</color>
+    <color name="colorCardBackground">#FFEEEA</color>
+    <color name="colorCardBackgroundGreen">#EDFFFD</color>
+    <color name="colorMaroon">#584C49</color>
+    <color name="colorLightGray">#DEDEDE</color>
+    <color name="colorPopupBg">#92000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLinechart">#8BD1CA</color>
+    <color name="colorLocalHint">#19A899</color>
+    <color name="colorEventName">#201E33</color>
+    <color name="colorEventHint">#9A9A9A</color>
+    <color name="colorAlarmHeadN">#D4D4D4</color>
+    <color name="colorAlarmHeadP">#93DAD3</color>
+    <color name="colorBtn">#FF7F61</color>
+    <color name="colorBtnGrey">#EEEEEE</color>
+    <color name="colorHighLine">#F4F5F7</color>
+    <color name="colorEventsUserBorder">#F8F8F8</color>
+    <color name="colorUserFill">#CFCFCF</color>
+    <color name="colorUserText">#9C9AAB</color>
+    <color name="colorWhiteBtn">#44091A02</color>
+    <color name="colorFormBg">#7CD8E3</color>
 
     <color name="item_view_selected_color">#cfcfcf</color>
     <color name="item_view_normal_color">#FFFFFFFF</color>

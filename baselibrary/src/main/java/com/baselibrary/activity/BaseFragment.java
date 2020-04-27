@@ -77,6 +77,11 @@ public abstract class BaseFragment extends RxFragment implements MAcitivity, Bas
     }
 
     @Override
+    public boolean useEventBus() {
+        return false;
+    }
+
+    @Override
     public void showFailure(boolean show) {
 
     }

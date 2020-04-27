@@ -83,4 +83,43 @@ public interface BaseView {
      */
     void showLog(String type, String tag, String msg);
 
+    /**
+     * 升级
+     */
+    void upgrade();
+
+    /**
+     * 重启设备
+     */
+    void restartDevice();
+
+    /**
+     * 更新可用内存信息
+     */
+    String upDateMemInfo();
+
+    /**
+     * 重启APP
+     *
+     * @param millis 时间
+     * @param isNow  是否立即重启
+     */
+    void restartApp(long millis, boolean isNow);
+
+    /**
+     * 隐藏导航栏
+     */
+    void hideBottomUIMenu();
+
+    /**
+     * 更新系统时间
+     *
+     * @param time 秒
+     */
+    void updateSystemTime(int time);
+
+    /**
+     * 获取设备Mac地址
+     */
+    String getMac();
 }
