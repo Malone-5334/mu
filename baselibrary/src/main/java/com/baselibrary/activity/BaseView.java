@@ -13,6 +13,12 @@ public interface BaseView {
 
     <T> LifecycleTransformer<T> bindToLifecycle();
 
+    /**
+     * 显示网络加载失败
+     *
+     * @param show
+     */
+    void showFailure(boolean show);
 
     /**
      * 显示加载

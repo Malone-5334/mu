@@ -73,6 +73,11 @@ public abstract class BaseActivity extends RxAppCompatActivity implements MAciti
     }
 
     @Override
+    public void showFailure(boolean show) {
+
+    }
+
+    @Override
     public void showLoading() {
         LoadingDialog.showed(this, "加载中...", false, false);
         showLog("showload");

@@ -77,6 +77,11 @@ public abstract class BaseFragment extends RxFragment implements MAcitivity, Bas
     }
 
     @Override
+    public void showFailure(boolean show) {
+
+    }
+
+    @Override
     public void showLoading() {
         LoadingDialog.showed(getContext(), "加载中...", false, false);
         showLog("showload");
