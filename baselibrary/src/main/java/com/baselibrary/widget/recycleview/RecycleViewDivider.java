@@ -28,6 +28,7 @@ public class RecycleViewDivider extends RecyclerView.ItemDecoration {
     private Paint paint;
     private Drawable divider;
     private int dividerHeight;
+    private int group = 0;
 
     public RecycleViewDivider(Context context, int orientation) {
         if (orientation != VERTICAL && orientation != HORIZONTAL) {
@@ -60,6 +61,18 @@ public class RecycleViewDivider extends RecyclerView.ItemDecoration {
         paint.setStyle(Paint.Style.FILL);
     }
 
+    public RecycleViewDivider(Context context, int orientation, int dividerHeight, int dividerColor, int group) {
+        if (orientation != VERTICAL && orientation != HORIZONTAL) {
+            throw new IllegalArgumentException("invalid orientation");
+        }
+        this.orientation = orientation;
+        this.dividerHeight = dividerHeight;
+        this.group = group;
+        paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        paint.setColor(dividerColor);
+        paint.setStyle(Paint.Style.FILL);
+    }
+
     @Override
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
         super.getItemOffsets(outRect, view, parent, state);
@@ -81,6 +94,9 @@ public class RecycleViewDivider extends RecyclerView.ItemDecoration {
         final int bottom = parent.getHeight() - parent.getPaddingBottom();
         final int childCount = parent.getChildCount();
         for (int i = 0; i < childCount; i++) {
+            if (group != 0 && (i + 1) % group == 0) {
+                continue;
+            }
             final View child = parent.getChildAt(i);
             RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) child.getLayoutParams();
             final int left = child.getRight() + layoutParams.rightMargin;
@@ -99,7 +115,17 @@ public class RecycleViewDivider extends RecyclerView.ItemDecoration {
         final int left = parent.getPaddingLeft();
         final int right = parent.getMeasuredWidth() - parent.getPaddingRight();
         final int childSize = parent.getChildCount();
+        int row = 0;
+        if (group != 0) {
+            row = childSize / group;
+            if (childSize % group == 0) {
+                row = row - 1;
+            }
+        }
         for (int i = 0; i < childSize; i++) {
+            if (group != 0 && i / group == row) {
+                continue;
+            }
             final View child = parent.getChildAt(i);
             RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) child.getLayoutParams();
             final int top = child.getBottom() + layoutParams.bottomMargin;
@@ -113,5 +139,4 @@ public class RecycleViewDivider extends RecyclerView.ItemDecoration {
             }
         }
     }
-
 }
