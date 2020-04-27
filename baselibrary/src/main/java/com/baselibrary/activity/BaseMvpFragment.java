@@ -15,7 +15,7 @@ import javax.inject.Inject;
 public abstract class BaseMvpFragment<P extends BasePresenter> extends BaseFragment {
 
     @Inject
-    protected P mPresenter;
+    public P mPresenter;
 
     /**
      * create presenter

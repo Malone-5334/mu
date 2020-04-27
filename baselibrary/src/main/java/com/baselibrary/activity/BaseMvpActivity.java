@@ -15,7 +15,7 @@ import javax.inject.Inject;
 public abstract class BaseMvpActivity<P extends BasePresenter> extends BaseActivity {
 
     @Inject
-    protected P mPresenter;
+    public P mPresenter;
 
     /**
      * create presenter
