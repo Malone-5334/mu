@@ -23,7 +23,9 @@ ext{
             gson : "2.8.5",
             dbflow : "4.2.4",
             okhttp3     : "4.2.0",
-            leakcanary : "1.5"
+            leakcanary : "1.5",
+            glide:"4.10.0",
+            zxing:"3.4.0"
     ]
 
     support = [
@@ -46,8 +48,13 @@ ext{
             dagger : "com.google.dagger:dagger:$dependVersion.dagger",
             daggerCompiler : "com.google.dagger:dagger-compiler:$dependVersion.dagger",
             DBFlow : "com.github.Raizlabs.DBFlow:dbflow-processor:$dependVersion.dbflow",
-            okhttp3 : "com.squareup.okhttp3:okhttp:$dependVersion.okhttp3"
-//            okio : "com.squareup.okio:okio:2.4.0"
+            okhttp3 : "com.squareup.okhttp3:okhttp:$dependVersion.okhttp3",
+//            okio : "com.squareup.okio:okio:2.4.0",
+
+            Glide:"com.github.bumptech.glide:glide:$dependVersion.glide",
+            GlideProcessor: "com.github.bumptech.glide:compiler:$dependVersion.glide",
+
+            Zxing: "com.google.zxing:core:$dependVersion.zxing"
     ]
 
     crashTinker = [
