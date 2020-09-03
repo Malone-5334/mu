@@ -40,4 +40,10 @@ public class NetWorkUtil {
         }
         return "";
     }
+
+    public static boolean isIPAdress(String ip) {
+        Pattern pattern = Pattern.compile(regexCIp);    // 编译正则表达式
+        Matcher matcher = pattern.matcher(ip);    // 创建给定输入模式的匹配器
+        return matcher.matches();
+    }
 }

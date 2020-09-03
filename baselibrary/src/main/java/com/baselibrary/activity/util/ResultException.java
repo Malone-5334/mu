@@ -13,11 +13,46 @@ public class ResultException extends RuntimeException {
 
 
     private int code;
+    private String codeStr;
     private String message;
+    private String json;
 
     public ResultException(int code, String message) {
         this.code = code;
         this.message = message;
+    }
+
+    public ResultException(String codeStr, String message) {
+        this.codeStr = codeStr;
+        this.message = message;
+    }
+
+    public ResultException(int code, String codeStr, String message) {
+        this.code = code;
+        this.codeStr = codeStr;
+        this.message = message;
+    }
+
+    public ResultException(String codeStr, String message, String json) {
+        this.codeStr = codeStr;
+        this.message = message;
+        this.json = json;
+    }
+
+    public String getJson() {
+        return json;
+    }
+
+    public void setJson(String json) {
+        this.json = json;
+    }
+
+    public String getCodeStr() {
+        return codeStr;
+    }
+
+    public void setCodeStr(String codeStr) {
+        this.codeStr = codeStr;
     }
 
     public int getCode() {

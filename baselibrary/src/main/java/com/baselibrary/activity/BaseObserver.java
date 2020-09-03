@@ -28,24 +28,21 @@ public abstract class BaseObserver<T> implements Observer<T> {
 
     @Override
     public void onNext(T response) {
-
         onSuccess(response);
     }
 
     @Override
     public void onError(Throwable e) {
-
-
         if (e instanceof ResultException) {
             onFailure(e.getMessage());
+            onFailure(((ResultException) e).getCode(), e.getMessage());
+            onFailure(((ResultException) e).getCodeStr(), e.getMessage());
+            onFailure(((ResultException) e).getCodeStr(), e.getMessage(), ((ResultException) e).getJson());
         } else {
-
             String error = HException.handleException(e).getMessage();
-
             _onError(error);
+            onError(error);
         }
-
-
     }
 
     @Override
@@ -64,18 +61,29 @@ public abstract class BaseObserver<T> implements Observer<T> {
      *
      * @param msg 服务器返回的数据
      */
-    public abstract void onFailure(String msg);
+    public void onFailure(String msg) {
+    }
+
+    public void onFailure(int code, String msg) {
+    }
+
+    public void onFailure(String code, String msg) {
+    }
+
+    public void onFailure(String code, String msg, String json) {
+    }
+
+    public void onError(String err) {
+    }
 
 
-//        public abstract void onError(String errorMsg);
+//    public abstract void onError(String errorMsg);
 
 
     private void _onSuccess(T responce) {
-
     }
 
     private void _onFailure(String msg) {
-
         if (TextUtils.isEmpty(msg)) {
 //                ToastUtils.show(R.string.response_return_error);
         } else {
@@ -84,10 +92,6 @@ public abstract class BaseObserver<T> implements Observer<T> {
     }
 
     private void _onError(String err) {
-
         Log.e("APIException", err);
-
     }
-
-
 }

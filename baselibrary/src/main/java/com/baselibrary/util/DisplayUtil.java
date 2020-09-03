@@ -8,6 +8,7 @@ import android.os.Build;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
+import android.util.TypedValue;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -47,6 +48,11 @@ public class DisplayUtil {
     public static int dip2px(Context c, float dpValue) {
         float scale = getDisplayMetrics(c).density;
         return (int) (dpValue * scale + 0.5F);
+    }
+
+    public static int dp2px(Context context, float dpVal) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpVal, context.getResources()
+                .getDisplayMetrics());
     }
 
     public static int px2dip(Context c, float pxValue) {

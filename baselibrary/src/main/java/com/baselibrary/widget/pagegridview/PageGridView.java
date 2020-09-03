@@ -283,7 +283,7 @@ public class PageGridView<T extends TypeModel> extends FrameLayout {
         ImageView imageView = mLlDot.getChildAt(0).findViewById(R.id.v_dot);
 
         imageView.setImageResource(selectedIndicator);
-        mViewPager.setOnPageChangeListener(new OnPageChangeListener() {
+        mViewPager.addOnPageChangeListener(new OnPageChangeListener() {
             public void onPageSelected(int position) {
                 // 取消圆点选中
                 ImageView lastImageView = mLlDot.getChildAt(curIndex)
@@ -366,7 +366,6 @@ public class PageGridView<T extends TypeModel> extends FrameLayout {
         @Override
         public int getCount() {
             return mDatas.size() > (curIndex + 1) * pageSize ? pageSize : (mDatas.size() - curIndex * pageSize);
-
         }
 
         @Override

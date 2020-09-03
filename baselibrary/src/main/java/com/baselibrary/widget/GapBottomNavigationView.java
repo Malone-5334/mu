@@ -17,11 +17,10 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 
 import androidx.annotation.RequiresApi;
+import androidx.annotation.NonNull;
 
 import com.baselibrary.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import org.jetbrains.annotations.NotNull;
 
 
 public class GapBottomNavigationView extends BottomNavigationView {
@@ -30,15 +29,15 @@ public class GapBottomNavigationView extends BottomNavigationView {
     private float cornerRadius = 12f;
     private float shadowLength = 6f;
 
-    public GapBottomNavigationView(@NotNull Context context) {
+    public GapBottomNavigationView(@NonNull Context context) {
         super(context);
     }
 
-    public GapBottomNavigationView(@NotNull Context context, @NotNull AttributeSet attrs) {
+    public GapBottomNavigationView(@NonNull Context context, @NonNull AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public GapBottomNavigationView(@NotNull Context context, @NotNull AttributeSet attrs, int defStyleAttr) {
+    public GapBottomNavigationView(@NonNull Context context, @NonNull AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr);
     }
@@ -66,7 +65,7 @@ public class GapBottomNavigationView extends BottomNavigationView {
 
     @SuppressLint({"DrawAllocation"})
     @RequiresApi(api = 19)
-    protected void onDraw(@NotNull Canvas canvas) {
+    protected void onDraw(@NonNull Canvas canvas) {
         super.onDraw(canvas);
         Paint paint = new Paint();
         Path path = new Path();

@@ -43,6 +43,8 @@ dependencies {
     api rootProject.ext.support.okhttp3
 //    api rootProject.ext.support.okio
     api rootProject.ext.support.butterknife
+    api rootProject.ext.support.Glide
+    api rootProject.ext.support.Zxing
 
     api rootProject.ext.bugly
     api rootProject.ext.retrofit

@@ -153,6 +153,29 @@ public class DateUtil {
         }
     }
 
+    public static int[] different(String bt, String et) {
+        try {
+            SimpleDateFormat dfs = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            Date begin = dfs.parse(bt);
+            Date end = dfs.parse(et);
+            long between = (end.getTime() - begin.getTime()) / 1000;//除以1000是为了转换成秒
+            long day = between / (24 * 3600);
+            long hour = between % (24 * 3600) / 3600;
+            long minute = between % 3600 / 60;
+            if (day > 0)
+                return new int[]{(int) day, (int) hour, (int) minute};
+            else {
+                if (hour > 0)
+                    return new int[]{(int) hour, (int) minute};
+                else
+                    return new int[]{(int) minute};
+            }
+        } catch (Exception e) {
+
+        }
+        return new int[]{};
+    }
+
     /**
      * 将日期格式化成友好的字符串：几分钟前、几小时前、几天前、几月前、几年前、刚刚
      *

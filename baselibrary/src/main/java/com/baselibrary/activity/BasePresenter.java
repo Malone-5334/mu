@@ -28,6 +28,9 @@ public class BasePresenter<V extends BaseView> implements MPresenter<V> {
 
 
     protected V getView() {
+        if (null == mView) {
+            return null;
+        }
         return mView.get();
     }
 
