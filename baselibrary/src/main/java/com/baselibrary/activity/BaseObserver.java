@@ -42,6 +42,7 @@ public abstract class BaseObserver<T> implements Observer<T> {
             String error = HException.handleException(e).getMessage();
             _onError(error);
             onError(error);
+            onFailure("",error);
         }
     }
 
